@@ -2,7 +2,7 @@
 
 A continuación presentamos un pequeño ejemplo de HTML aplicando SASS para generar un diseño web responsive.
 
-**Pasos para ejecutar el procesador de SASS**
+**Pasos para compilar el código de SASS en CSS**
 1. Tener preinstalado en nuestro sistema NodeJS
 2. Instalar el compilador de SASS utilizando la consola o terminal del equipo ejecutando el siguiente comando:
     ``` 
