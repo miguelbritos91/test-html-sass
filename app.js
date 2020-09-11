@@ -49,7 +49,7 @@ function gethashtag(url){
 function newCard(item,avatar){
     let hashtag = gethashtag(item.url)
     const card = `
-        <div class="col-lg-4 col-md-6 p-0 px-2 item-cards">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-0 item-cards">
             <div class="d-flex flex-row">
                 <img class="img-fluid pic" src="${item.src.landscape}" alt="${item.src.landscape}">
             </div>

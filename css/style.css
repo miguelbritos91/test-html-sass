@@ -1,48 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-#main .item-cards {
-  max-width: 350px;
-  max-height: 350px;
-  margin-bottom: 30px !important; }
-  @media screen and (max-width: 768px) {
-    #main .item-cards {
-      max-width: 311px;
-      max-height: 311px;
-      margin-bottom: 20px !important; } }
-  #main .item-cards .pic {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px; }
-  #main .item-cards .photographer-data {
-    background: #D6D5D6;
-    height: 71px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    overflow: hidden; }
-    #main .item-cards .photographer-data .avatar {
-      width: 46px;
-      height: 46px; }
-    #main .item-cards .photographer-data .photographer-name {
-      font-family: "Roboto", sans-serif;
-      font-weight: 500;
-      font-size: 16px; }
-    #main .item-cards .photographer-data .photographer-tag {
+#main {
+  max-width: 1110px !important; }
+  @media screen and (min-width: 992px) and (max-width: 1150px) {
+    #main {
+      max-width: 920px !important; } }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    #main {
+      max-width: 716px !important; } }
+  #main #cards {
+    justify-content: space-between !important; }
+    @media screen and (max-width: 768px) {
+      #main #cards {
+        justify-content: center !important; } }
+  #main .item-cards {
+    max-width: 350px;
+    max-height: 350px;
+    margin-bottom: 30px !important; }
+    @media screen and (min-width: 992px) and (max-width: 1150px) {
+      #main .item-cards {
+        max-width: 300px;
+        max-height: 300px; } }
+    @media screen and (max-width: 768px) {
+      #main .item-cards {
+        max-width: 311px;
+        max-height: 311px;
+        padding: 10px 10px !important;
+        margin-bottom: 20px !important; } }
+    #main .item-cards .pic {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px; }
+    #main .item-cards .photographer-data {
+      background: #D6D5D6;
+      height: 71px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      overflow: hidden; }
+      #main .item-cards .photographer-data .avatar {
+        width: 46px;
+        height: 46px; }
+      #main .item-cards .photographer-data .photographer-name {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px; }
+      #main .item-cards .photographer-data .photographer-tag {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 14px; }
+  #main #loadmore-content {
+    margin-bottom: 70px; }
+    @media screen and (max-width: 768px) {
+      #main #loadmore-content {
+        margin-top: 20px; } }
+    #main #loadmore-content .loadmore {
+      color: #C23F81;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
-      font-size: 14px; }
-
-#main #loadmore-content {
-  margin-bottom: 70px; }
-  @media screen and (max-width: 768px) {
-    #main #loadmore-content {
-      margin-top: 20px; } }
-  #main #loadmore-content .loadmore {
-    color: #C23F81;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    cursor: pointer; }
-
-#main .hidden {
-  display: none; }
+      font-size: 20px;
+      cursor: pointer; }
+  #main .hidden {
+    display: none; }
 
 #navbar {
   height: 68px !important;
