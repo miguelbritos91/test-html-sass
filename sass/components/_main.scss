@@ -1,0 +1,57 @@
+@import 'global-values';
+
+#main{
+    .item-cards{
+        max-width: 350px;
+        max-height: 350px;
+        margin-bottom: 30px !important;
+        @media screen and(max-width: 768px){
+            max-width: 311px;
+            max-height: 311px;
+            margin-bottom: 20px !important;
+        }
+        .pic{
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .photographer-data{
+            background: $color-gray;
+            height: 71px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow: hidden;
+            .avatar{
+                width: 46px;
+                height: 46px;
+            }
+            .photographer-name{
+                font-family: $roboto;
+                font-weight: 500;
+                font-size: 16px;
+            }
+            .photographer-tag{
+                font-family: $roboto;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+    
+    #loadmore-content{
+        margin-bottom: 70px;
+        @media screen and(max-width: 768px){
+            margin-top: 20px;
+        }
+        .loadmore{
+            color: $color-red;
+            font-family: $roboto;
+            font-weight: 400;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+}

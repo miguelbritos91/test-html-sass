@@ -10,5 +10,5 @@ A continuación presentamos un pequeño ejemplo de HTML aplicando SASS para gene
     ```
 3. Ejecutar con la consola o terminal del equipo ubicados en el directorio del proyecto la función de _node-sass_ para compilar nuestro codigo, en la misma linea hay que especificar la carpeta de origen que contiene nuestro codigo _sass_ seguido por el flag _-o (output)_ y el nombre de la carpeta de desino donde se van a compilar nuestros estilos _css_. El flag _-w (watch)_ es una función que una vez ejecutada la linea de comandos, permite ver en consola los cambios que se van produciendo, ayuda para un mejor DEBUG.
     ```
-        node-sass -w scss -o css
+        node-sass -w sass -o css
     ```

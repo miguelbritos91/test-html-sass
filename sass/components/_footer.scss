@@ -1,0 +1,13 @@
+@import 'global-values';
+
+.footer{
+    background-color: $color-dark;
+    height: 55px;
+    border-top: 5px solid $color-red;
+    .footer-text{
+        color: $color-white;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: $roboto;
+    }
+}

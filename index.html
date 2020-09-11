@@ -8,8 +8,96 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <span>Hola mundo</span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between px-5" id="navbar">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="197.392" height="38.7" viewBox="0 0 197.392 38.7">
+                <g id="Grupo_6" data-name="Grupo 6" transform="translate(-85.29 -22.91)">
+                  <g id="logo" transform="translate(-1319.317 -750.643)">
+                    <path id="Trazado_2" data-name="Trazado 2" d="M9.942-23.694l3.744-10.548h.081L17.39-23.694Zm3.744-25.754L-.324-12.582H6.037l2.255-6.4H19.041l2.174,6.4h6.562L13.767-49.448ZM47.947-31.665h6.119A11.586,11.586,0,0,0,52.7-36.094a10.77,10.77,0,0,0-2.758-3.241,12.152,12.152,0,0,0-3.784-1.993,14.483,14.483,0,0,0-4.489-.684,14.519,14.519,0,0,0-5.938,1.168,12.7,12.7,0,0,0-4.449,3.221A14.361,14.361,0,0,0,28.5-32.812a17.961,17.961,0,0,0-.966,5.979,17.361,17.361,0,0,0,.966,5.858,13.99,13.99,0,0,0,2.778,4.731,12.724,12.724,0,0,0,4.449,3.16,14.74,14.74,0,0,0,5.938,1.147,14.16,14.16,0,0,0,4.871-.805A11.3,11.3,0,0,0,50.4-15.078a11.668,11.668,0,0,0,2.657-3.7,14.613,14.613,0,0,0,1.248-4.871H48.189a8.192,8.192,0,0,1-1.993,4.67,5.849,5.849,0,0,1-4.529,1.771,7.379,7.379,0,0,1-3.623-.825,6.913,6.913,0,0,1-2.416-2.194,9.52,9.52,0,0,1-1.349-3.08,14.633,14.633,0,0,1-.423-3.523,15.73,15.73,0,0,1,.423-3.664,9.7,9.7,0,0,1,1.349-3.16,6.841,6.841,0,0,1,2.416-2.214,7.379,7.379,0,0,1,3.623-.825,6.571,6.571,0,0,1,2.234.382,6.5,6.5,0,0,1,1.912,1.067,6.354,6.354,0,0,1,1.409,1.59A5.161,5.161,0,0,1,47.947-31.665Zm9.179-9.662v28.745h5.918v-20.17h.081l7.045,20.17h4.871l7.045-20.371h.081v20.371h5.918V-41.327h-8.9L72.828-21.56h-.081L66.024-41.327Zm35.026,0v28.745h21.821V-17.9h-15.5v-7.045H112.4v-4.912H98.474v-6.16h15.178v-5.314Z" transform="translate(1404.931 823.001)" fill="#c23f81"/>
+                    <text id="gallery" transform="translate(1520.042 806.254)" fill="#74667e" font-size="23" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">gallery</tspan></text>
+                    <g id="arrow" transform="translate(1601.999 776.536) rotate(90)">
+                      <rect id="Rectángulo_10" data-name="Rectángulo 10" width="12.366" height="12.366" transform="translate(3.191)" fill="#c23f81"/>
+                      <rect id="Rectángulo_11" data-name="Rectángulo 11" width="12.765" height="12.765" transform="translate(0 2.792)" fill="#fff"/>
+                    </g>
+                  </g>
+                </g>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25">
+                <g id="Grupo_7" data-name="Grupo 7" transform="translate(-323 -12)">
+                  <rect id="menu-bg" width="30" height="25" rx="4" transform="translate(323 12)" fill="#c23f81"/>
+                  <g id="Grupo_5" data-name="Grupo 5" transform="translate(2 1)">
+                    <rect id="Rectángulo_15" data-name="Rectángulo 15" width="19" height="2" rx="1" transform="translate(327 17)" fill="#fff"/>
+                    <rect id="Rectángulo_16" data-name="Rectángulo 16" width="13" height="2" rx="1" transform="translate(327 23)" fill="#fff"/>
+                    <rect id="Rectángulo_17" data-name="Rectángulo 17" width="19" height="2" rx="1" transform="translate(327 29)" fill="#fff"/>
+                  </g>
+                </g>
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <button class="btn btn-login">LOGIN</button>    
+        </div>
+    </nav>
+    <header class="d-flex header px-5 align-items-end">
+        <h1 class="title">Gallery</h1>
+    </header>
+    <div class="container-fluid px-5" id="main">
+      <div class="d-flex flex-row search-container">
+          <form class="form-inline search">
+              <div class="form-group d-flex">
+                  <label for="" class="label-form mr-2">Search by #</label>
+                  <div class="input-group">
+                      <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="29.347" height="29.934" viewBox="0 0 29.347 29.934">
+                              <g id="surface1" transform="translate(-0.109 0)">
+                                <path id="Trazado_1" data-name="Trazado 1" d="M20.555,17.763a11.255,11.255,0,1,0-3.462,3.188l8.3,8.25a2.356,2.356,0,0,0,3.416-3.245c-.028-.03-.056-.058-.086-.086Zm-9.194.769a7.254,7.254,0,1,1,.005,0Zm0,0" transform="translate(0 0)" fill="#fff"/>
+                              </g>
+                          </svg>
+                        </span>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <div class="row justify-content-center hidden" id="cards"></div>
+      <div class="row justify-content-center hidden" id="loadmore-content">
+        <div class="d-flex">
+          <a class="m-0 p-0 loadmore" id="link-more">Load more</a>
+        </div>
+      </div>
+      <div class="row justify-content-center my-5" id="spinner">
+        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
     </div>
+    <footer class="d-flex flex-row justify-content-center align-items-center footer fixed-bottom" id="footer">
+      <span class="logo-footer mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="144.057" height="28.269" viewBox="0 0 144.057 28.269">
+          <g id="Grupo_7" data-name="Grupo 7" transform="translate(-486.01 -26)">
+            <g id="Grupo_6" data-name="Grupo 6">
+              <g id="logo" transform="translate(-918.597 -747.554)">
+                <path id="Trazado_2" data-name="Trazado 2" d="M7.168-30.652,9.9-38.35H9.96l2.644,7.7ZM9.9-49.448-.324-22.543H4.318l1.645-4.672h7.845L15.4-22.543h4.789L9.96-49.448Zm25,12.978h4.466a8.456,8.456,0,0,0-1-3.232,7.86,7.86,0,0,0-2.013-2.365A8.868,8.868,0,0,0,33.6-43.521a10.57,10.57,0,0,0-3.276-.5,10.6,10.6,0,0,0-4.334.852,9.27,9.27,0,0,0-3.247,2.351,10.481,10.481,0,0,0-2.027,3.511,13.108,13.108,0,0,0-.705,4.363,12.67,12.67,0,0,0,.705,4.275,10.21,10.21,0,0,0,2.027,3.452,9.286,9.286,0,0,0,3.247,2.306,10.757,10.757,0,0,0,4.334.837,10.334,10.334,0,0,0,3.555-.588,8.243,8.243,0,0,0,2.821-1.7,8.515,8.515,0,0,0,1.939-2.7,10.665,10.665,0,0,0,.911-3.555H35.081a5.979,5.979,0,0,1-1.454,3.408,4.268,4.268,0,0,1-3.305,1.293,5.385,5.385,0,0,1-2.644-.6,5.045,5.045,0,0,1-1.763-1.6,6.948,6.948,0,0,1-.984-2.248,10.679,10.679,0,0,1-.309-2.571,11.48,11.48,0,0,1,.309-2.674,7.081,7.081,0,0,1,.984-2.306,4.993,4.993,0,0,1,1.763-1.616,5.385,5.385,0,0,1,2.644-.6,4.8,4.8,0,0,1,1.631.279,4.743,4.743,0,0,1,1.4.779,4.637,4.637,0,0,1,1.028,1.161A3.767,3.767,0,0,1,34.9-36.47Zm6.7-7.052v20.979h4.319v-14.72h.059l5.142,14.72h3.555L59.82-37.41h.059v14.867H64.2V-43.521H57.7L53.063-29.1H53L48.1-43.521Zm25.562,0v20.979H83.091v-3.878H71.779v-5.142H81.945v-3.585H71.779v-4.5H82.856v-3.878Z" transform="translate(1404.931 823.001)" fill="#fff"/>
+                <text id="gallery" transform="translate(1488.852 797.822)" fill="#fff" font-size="17" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">gallery</tspan></text>
+                <g id="arrow" transform="translate(1548.664 775.73) rotate(90)">
+                  <rect id="Rectángulo_10" data-name="Rectángulo 10" width="9.025" height="9.025" transform="translate(2.329 0)" fill="#c23f81"/>
+                  <rect id="Rectángulo_11" data-name="Rectángulo 11" width="9.316" height="9.316" transform="translate(0 2.038)" fill="#313131"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span class="footer-text">&#169; All right reserved 2020</span>
+    </footer>
+    <!-- JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

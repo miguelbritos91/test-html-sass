@@ -1,0 +1,47 @@
+@import 'global-values';
+
+.search-container{
+    padding: 30px 0px;
+    justify-content: flex-end;
+    @media screen and(max-width: 768px){
+        padding: 10px 0px;
+        justify-content: center;
+    }
+    .search{
+        .input-group{
+            width: 281px;
+            @media screen and(max-width: 768px){
+                width: 261px;
+            }
+        }
+        .label-form{
+            color: #888888;
+            @media screen and(max-width: 768px){
+                display: none;
+            }
+        }   
+        input{
+            background-color: #ECECEC;
+            border: none !important;
+            height: 47px;
+            border-radius: 10px;
+            @media screen and(max-width: 768px){
+                height: 35px;
+                border-radius: 4px;
+            }
+        }
+        .input-group-append{
+            @media screen and(max-width: 768px){
+                height: 35px;
+            }
+        }
+        .input-group-text{
+            background-color: #ECECEC;
+            border: none !important;
+            border-radius: 10px;
+            @media screen and(max-width: 768px){
+                border-radius: 4px;
+            }
+        }
+    }
+}

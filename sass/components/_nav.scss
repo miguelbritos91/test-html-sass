@@ -1,0 +1,20 @@
+@import 'global-values';
+
+#navbar{
+    height: 68px !important;
+    background-color: $color-white !important;
+    .navbar-toggler{
+        border-color: transparent !important;
+        padding: 0px !important;
+    }
+    .btn-login{
+        background-color: $color-red;
+        color: $color-white;
+        border-radius: 8px;
+        width: 81px;
+        height: 37px;
+        font-family: $roboto;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
