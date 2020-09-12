@@ -1,4 +1,4 @@
-// key api 563492ad6f91700001000001095dc4a79c8b481cb9faaf8b9bcf7f79
+// key api imagenes pexels:  563492ad6f91700001000001095dc4a79c8b481cb9faaf8b9bcf7f79
 const Axios = axios.create({
     baseURL: 'https://api.pexels.com/v1/',
     headers: {'Authorization': '563492ad6f91700001000001095dc4a79c8b481cb9faaf8b9bcf7f79'},
@@ -15,6 +15,14 @@ let link_more = document.getElementById('link-more')
 let search = document.getElementById('search')
 let querySelect = 'nature'
 
+/**
+ * Funcion Obtener Imagenes
+ * 
+ * Esta función permite obtener imagenes de la api de pexels.
+ * Recibe como paametros el nuemero de pagina (page) y una palabra o frase de busqueda (query)
+ * @param {*} page 
+ * @param {*} query 
+ */
 async function getImages(page,query){
     let response
     await Axios.get(`search?page=${page}&per_page=6&query=${query}`)
@@ -26,6 +34,11 @@ async function getImages(page,query){
     })
     return response
 }
+/**
+ * Funcion obtener avatar
+ * Esta función obtiene datos ficticios de una api de sumulacion de datos 
+ * de personas.
+ */
 async function getAvatar(){
     let response
     await Axios.get('https://randomuser.me/api/')
@@ -38,6 +51,12 @@ async function getAvatar(){
     }) 
     return response
 }
+/**
+ * Funcion obtener hashtag
+ * Esta función permite crear un hashtag de la imagen a traves del nombre original de la imagen en la url
+ * recibe como parametro el valor de la url de la imagen
+ * @param {*} url 
+ */
 function gethashtag(url){
     let tags = url.slice(29)
     let hashtag = '#'
@@ -48,6 +67,13 @@ function gethashtag(url){
     }
     return hashtag
 }
+/**
+ * Funcion nueva card
+ * Esta funcion recibe como parametro los items obtenidos de las busquedas en las api de imagenes (item) - (avatar)
+ * 
+ * @param {*} item 
+ * @param {*} avatar 
+ */
 function newCard(item,avatar){
     let hashtag = gethashtag(item.url)
     const card = `
@@ -73,6 +99,9 @@ function newCard(item,avatar){
     return card
 }
 
+/**
+ * Funcion de carga inicial de la web
+ */
 window.onload = async ()=>{
     let images = await getImages(1,querySelect)
     listPhotos = images.photos
@@ -88,7 +117,9 @@ window.onload = async ()=>{
     spinner.classList.add('hidden')
     footer.classList.remove('fixed-bottom')
 }
-
+/**
+ * Funcion cargar mas imagenes
+ */
 link_more.addEventListener('click', async () => {
     load_more.classList.add('hidden')
     spinner.classList.remove('hidden')
@@ -110,7 +141,9 @@ link_more.addEventListener('click', async () => {
     spinner.classList.add('hidden')
     load_more.classList.remove('hidden')
 })
-
+/**
+ * Funcion de nueva busqueda de imagenes
+ */
 search.addEventListener('keyup', async (e) => {
     if(e.key == 'Enter'){
         if(search.value.length > 0){
