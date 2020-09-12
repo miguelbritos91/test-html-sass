@@ -12,10 +12,12 @@ let load_more = document.getElementById('loadmore-content')
 let spinner = document.getElementById('spinner')
 let footer = document.getElementById('footer')
 let link_more = document.getElementById('link-more')
+let search = document.getElementById('search')
+let querySelect = 'nature'
 
-async function getImages(page){
+async function getImages(page,query){
     let response
-    await Axios.get(`search?page=${page}&per_page=6&query=nature`)
+    await Axios.get(`search?page=${page}&per_page=6&query=${query}`)
     .then(res=>{
         response = res.data
     })
@@ -72,7 +74,7 @@ function newCard(item,avatar){
 }
 
 window.onload = async ()=>{
-    let images = await getImages(1)
+    let images = await getImages(1,querySelect)
     listPhotos = images.photos
     let pack_pictures = ''
     for (let pic of listPhotos) {
@@ -85,8 +87,6 @@ window.onload = async ()=>{
     load_more.classList.remove('hidden')
     spinner.classList.add('hidden')
     footer.classList.remove('fixed-bottom')
-    
-    console.log(images)
 }
 
 link_more.addEventListener('click', async () => {
@@ -94,7 +94,7 @@ link_more.addEventListener('click', async () => {
     spinner.classList.remove('hidden')
     page_actual += 1
     console.log(page_actual);
-    let images = await getImages(page_actual)
+    let images = await getImages(page_actual,querySelect)
     console.log(images);
     listPhotos = images.photos
     console.log(listPhotos);
@@ -109,4 +109,29 @@ link_more.addEventListener('click', async () => {
     cardsContainer.innerHTML += pack_pictures
     spinner.classList.add('hidden')
     load_more.classList.remove('hidden')
+})
+
+search.addEventListener('keyup', async (e) => {
+    if(e.key == 'Enter'){
+        if(search.value.length > 0){
+            cardsContainer.classList.add('hidden')
+            load_more.classList.add('hidden')
+            spinner.classList.remove('hidden')
+            footer.classList.add('fixed-bottom')
+            querySelect = search.value
+            let images = await getImages(1,querySelect)
+            listPhotos = images.photos
+            let pack_pictures = ''
+            for (let pic of listPhotos) {
+                let avatar = await getAvatar()
+                const card = newCard(pic,avatar)
+                pack_pictures += card
+            }
+            cardsContainer.innerHTML = pack_pictures
+            cardsContainer.classList.remove('hidden')
+            load_more.classList.remove('hidden')
+            spinner.classList.add('hidden')
+            footer.classList.remove('fixed-bottom')
+        }
+    }
 })

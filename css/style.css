@@ -61,7 +61,7 @@
     display: none; }
 
 #navbar {
-  height: 68px !important;
+  min-height: 68px !important;
   background-color: #FFFFFF !important; }
   #navbar .navbar-toggler {
     border-color: transparent !important;

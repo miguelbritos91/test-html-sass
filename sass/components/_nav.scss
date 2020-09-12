@@ -1,7 +1,7 @@
 @import 'global-values';
 
 #navbar{
-    height: 68px !important;
+    min-height: 68px !important;
     background-color: $color-white !important;
     .navbar-toggler{
         border-color: transparent !important;
