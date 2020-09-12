@@ -46,7 +46,6 @@ async function getAvatar(){
         response = res.data.results[0].picture.large
     })
     .catch(e=>{
-        console.log(e);
         response = e
     }) 
     return response
@@ -124,19 +123,14 @@ link_more.addEventListener('click', async () => {
     load_more.classList.add('hidden')
     spinner.classList.remove('hidden')
     page_actual += 1
-    console.log(page_actual);
     let images = await getImages(page_actual,querySelect)
-    console.log(images);
     listPhotos = images.photos
-    console.log(listPhotos);
     let pack_pictures = ''
     for (let pic of listPhotos) {
-        console.log(pic);
         let avatar = await getAvatar()
         const card = newCard(pic,avatar)
         pack_pictures += card
     }
-    console.log(pack_pictures);
     cardsContainer.innerHTML += pack_pictures
     spinner.classList.add('hidden')
     load_more.classList.remove('hidden')
